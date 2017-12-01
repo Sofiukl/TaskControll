@@ -33,7 +33,7 @@ app.use(session(sessionOpts));
 
 
 //start the server
-server.listen(properties.serverPort, function(){
+server.listen(process.env.port, function(){
 	console.log('Server running at ' + properties.serverPort + ' port..');	
 });
 
