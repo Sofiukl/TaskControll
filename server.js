@@ -33,7 +33,8 @@ app.use(session(sessionOpts));
 
 
 //start the server
-server.listen(process.env.port, function(){
+var port = process.env.port || 3000;
+server.listen(port, function(){
 	console.log('Server running at ' + properties.serverPort + ' port..');	
 });
 
