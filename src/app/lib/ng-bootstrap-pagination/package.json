@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      "ng-bootstrap-pagination",
+      "D:\\progrming\\Javascript\\TaskControll"
+    ]
+  ],
+  "_from": "ng-bootstrap-pagination@latest",
+  "_id": "ng-bootstrap-pagination@0.2.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ng-bootstrap-pagination",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ng-bootstrap-pagination-0.2.2.tgz_1504546104481_0.9327394724823534"
+  },
+  "_npmUser": {
+    "email": "joje.attrs@gmail.com",
+    "name": "joje"
+  },
+  "_npmVersion": "4.6.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ng-bootstrap-pagination",
+    "raw": "ng-bootstrap-pagination",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-bootstrap-pagination/-/ng-bootstrap-pagination-0.2.2.tgz",
+  "_shasum": "531ad7b32338f20fb30b91b8917bbfdb049968a9",
+  "_shrinkwrap": null,
+  "_spec": "ng-bootstrap-pagination",
+  "_where": "D:\\progrming\\Javascript\\TaskControll",
+  "author": {
+    "email": "joje.attrs@gmail.com",
+    "name": "joje"
+  },
+  "bugs": {
+    "url": "https://github.com/attrs/ng-bootstrap-pagination/issues"
+  },
+  "dependencies": {},
+  "description": "angularjs bootstrap pagination",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "531ad7b32338f20fb30b91b8917bbfdb049968a9",
+    "tarball": "https://registry.npmjs.org/ng-bootstrap-pagination/-/ng-bootstrap-pagination-0.2.2.tgz"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "gitHead": "b186c8f14132882b16e5c5005dd0fc3e46e70403",
+  "homepage": "https://github.com/attrs/ng-bootstrap-pagination",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "directives",
+    "pagination",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "main": "lib/pagination.js",
+  "maintainers": [
+    {
+      "email": "contact.attrs@gmail.com",
+      "name": "attrs"
+    },
+    {
+      "email": "joje.attrs@gmail.com",
+      "name": "joje"
+    }
+  ],
+  "name": "ng-bootstrap-pagination",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "angular": "1.x"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attrs/ng-bootstrap-pagination.git"
+  },
+  "scripts": {},
+  "version": "0.2.2"
+}

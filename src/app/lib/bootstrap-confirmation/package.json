@@ -1,0 +1,69 @@
+{
+  "_args": [
+    [
+      "bootstrap-confirmation",
+      "D:\\progrming\\Javascript\\TaskControll"
+    ]
+  ],
+  "_from": "bootstrap-confirmation@*",
+  "_id": "bootstrap-confirmation@0.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/bootstrap-confirmation",
+  "_npmUser": {
+    "email": "rochappy.sun@gmail.com",
+    "name": "rochappy"
+  },
+  "_npmVersion": "1.3.21",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "bootstrap-confirmation",
+    "raw": "bootstrap-confirmation",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-confirmation/-/bootstrap-confirmation-0.0.2.tgz",
+  "_shasum": "846fcc9718cf72e5ad4053b1c78478d92a2c3d5c",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-confirmation",
+  "_where": "D:\\progrming\\Javascript\\TaskControll",
+  "author": {
+    "name": "ethaizone"
+  },
+  "bugs": {
+    "url": "https://github.com/rochappy/Bootstrap-Confirmation/issues"
+  },
+  "dependencies": {},
+  "description": "bootstrap-confirmation",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "846fcc9718cf72e5ad4053b1c78478d92a2c3d5c",
+    "tarball": "https://registry.npmjs.org/bootstrap-confirmation/-/bootstrap-confirmation-0.0.2.tgz"
+  },
+  "homepage": "https://github.com/rochappy/Bootstrap-Confirmation",
+  "license": "ISC",
+  "main": "./bootstrap-confirmation.js",
+  "maintainers": [
+    {
+      "name": "rochappy",
+      "email": "rochappy.sun@gmail.com"
+    }
+  ],
+  "name": "bootstrap-confirmation",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rochappy/Bootstrap-Confirmation.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.2"
+}

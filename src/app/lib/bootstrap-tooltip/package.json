@@ -1,0 +1,74 @@
+{
+  "_args": [
+    [
+      "bootstrap-tooltip",
+      "D:\\progrming\\Javascript\\TaskControll"
+    ]
+  ],
+  "_from": "bootstrap-tooltip@*",
+  "_id": "bootstrap-tooltip@3.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/bootstrap-tooltip",
+  "_npmUser": {
+    "email": "terinjokes@gmail.com",
+    "name": "terinjokes"
+  },
+  "_npmVersion": "1.4.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "bootstrap-tooltip",
+    "raw": "bootstrap-tooltip",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-tooltip/-/bootstrap-tooltip-3.1.1.tgz",
+  "_shasum": "6f03bdffdfc397e76b07828473d1ee3e7bdfe45c",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-tooltip",
+  "_where": "D:\\progrming\\Javascript\\TaskControll",
+  "author": {
+    "name": "Twitter, Inc"
+  },
+  "bugs": {
+    "url": "https://github.com/terinjokes/bootstrap-tooltip/issues"
+  },
+  "dependencies": {
+    "jquery": "~2.1.0"
+  },
+  "description": "Twitter Bootstrap's jQuery tooltip plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "6f03bdffdfc397e76b07828473d1ee3e7bdfe45c",
+    "tarball": "https://registry.npmjs.org/bootstrap-tooltip/-/bootstrap-tooltip-3.1.1.tgz"
+  },
+  "homepage": "https://github.com/terinjokes/bootstrap-tooltip",
+  "keywords": [
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "terinjokes",
+      "email": "terinjokes@gmail.com"
+    }
+  ],
+  "name": "bootstrap-tooltip",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terinjokes/bootstrap-tooltip.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "3.1.1"
+}

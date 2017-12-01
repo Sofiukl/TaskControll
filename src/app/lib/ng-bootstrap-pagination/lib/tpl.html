@@ -1,0 +1,50 @@
+<ul class="pagination mv0">
+  <li ng-if="showFirst" class="pagination-first" ng-class="prevable ? '' : 'disabled'">
+    <a href aria-label="Previous" ng-click="first()">
+      <span aria-hidden="true" ng-bind-html="(txt_first || 'First') | unsafe"></span>
+    </a>
+  </li>
+  <li ng-if="showPrev" class="pagination-prev" ng-class="prevable ? '' : 'disabled'">
+    <a href aria-label="Previous" ng-click="prev()">
+      <span aria-hidden="true" ng-bind-html="(txt_prev || 'Previous') | unsafe"></span>
+    </a>
+  </li>
+  
+  <li ng-if="showPrevSet" class="pagination-btn">
+    <a href aria-label="First Page" ng-click="go(1)">
+      <span aria-hidden="true">1</span>
+    </a>
+  </li>
+  <li ng-if="showPrevSet" class="pagination-prevset">
+    <a href aria-label="..." ng-click="prevset()">
+      <span aria-hidden="true" ng-bind-html="(txt_prevset || '...') | unsafe"></span>
+    </a>
+  </li>
+  
+  <li class="pagination-btn" ng-class="page.active ? 'active' : ''" ng-repeat="page in pages track by $index">
+    <a href ng-click="go(page.page)">{{page.page}}</a>
+  </li>
+  
+  <li ng-if="showNextSet" class="pagination-nextset">
+    <a href aria-label="..." ng-click="nextset()">
+      <span aria-hidden="true" ng-bind-html="(txt_nextset || '...') | unsafe"></span>
+    </a>
+  </li>
+  <li ng-if="showNextSet" class="pagination-nextset">
+    <a href aria-label="Last Page" ng-click="go(lastindex)">
+      <span aria-hidden="true">{{lastindex}}</span>
+    </a>
+  </li>
+  
+  
+  <li ng-if="showNext" class="pagination-next" ng-class="nextable ? '' : 'disabled'">
+    <a href aria-label="Next" ng-click="next()">
+      <span aria-hidden="true" ng-bind-html="(txt_next || 'Next') | unsafe"></span>
+    </a>
+  </li>
+  <li ng-if="showLast" class="pagination-last" ng-class="nextable ? '' : 'disabled'">
+    <a href aria-label="Last" ng-click="last()">
+      <span aria-hidden="true" ng-bind-html="(txt_last || 'Last') | unsafe"></span>
+    </a>
+  </li>
+</ul>
