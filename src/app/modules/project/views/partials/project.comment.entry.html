@@ -1,0 +1,44 @@
+<div class="container">
+     <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="modal-header">
+                {{projectCommentEntry.title}}
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" 
+                        class="form-control" 
+                        ng-model="projectCommentEntry.form.startDate" 
+                        is-open="projectCommentEntry.opened" 
+                        close-text="Close" />
+                </div>
+                
+                 <div class="form-group">
+                    <label for="completionDate">Completion Date</label>
+                    <input type="date" 
+                        class="form-control" 
+                        ng-model="projectCommentEntry.form.completionDate" 
+                        is-open="projectCommentEntry.openedcompletionDate" 
+                        close-text="Close" />
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Description</label>
+                    <textarea class="form-control" rows="5" id="comment" ng-model="projectCommentEntry.form.comment"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="pull-right comment-footer">
+                <button class="btn btn-sm btn-success" type="button" ng-click="projectCommentEntry.saveComment()">Save</button>
+                <button class="btn btn-sm btn-warning" type="button" ng-click="projectCommentEntry.cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+

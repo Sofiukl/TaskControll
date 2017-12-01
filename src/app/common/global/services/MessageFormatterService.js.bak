@@ -1,0 +1,13 @@
+(function(){
+
+	'use strict';
+	function MessageFormatterService (date, nick, message) {
+	     
+	     return date.toLocaleTimeString() + ' - ' + 
+           nick + ' - ' + 
+           message + '\n';
+	};
+
+	angular.module('taskControllApp').factory('MessageFormatter', MessageFormatterService);
+
+})

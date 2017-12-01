@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active">
+          <a ui-sref="root.home.dashboard">
+            <i class="fa fa-tachometer fa-2x margin-right-10 fa-bg-warning" aria-hidden="true"></i>Dashboard <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li><a ui-sref="root.home.taskEntry"><i class="fa fa-plus fa-2x margin-right-10 fa-bg-warning" aria-hidden="true"></i>Add Task</a></li>
+        <li>
+          <a ui-sref="root.home.viewDefaultProject({feedId:1.0})" class="hr-bottom"><i class="fa fa-folder fa-2x margin-right-10 fa-bg-warning" aria-hidden="true"></i>Default Folder</a>
+        </li>
+        <li><a ui-sref="root.home.viewJiraTask"><i class="fa fa-search fa-2x margin-right-10 fa-bg-warning" aria-hidden="true"></i>Search From Jira</a></li>
+      </ul>
+      <ul class="nav nav-sidebar" ng-controller="ProjectController as projectCtrl">
+        <li>
+          <div class="hr-bottom text-danger"> 
+            <h4> <span class="fa fa-tasks margin-right-10" aria-hidden="true"></span>Folders </h4> 
+          </div>
+        </li>
+
+        <li ng-repeat="project in projectCtrl.allProjects">
+          <span>
+            <a ng-click="projectCtrl.redirectToRoute(project.name)" class="text-info">
+              <span class="fa fa-circle fa-{{($index < 3)? $index : $index % 3}} margin-right-10" aria-hidden="true"></span>
+              {{project.name}} <span class="badge badge-info margin-left-10"> {{project.taskCount}}
+              </span>
+            </a>
+            <i class="fa fa-comment pull-right margin-top-4" aria-hidden="true" ng-click="projectCtrl.open($index)"> </i>
+            <i class="fa fa-trash pull-right margin-top-4 project-del" aria-hidden="true" data-toggle="confirmation" 
+            data-title="Ary you sure?" ng-click="projectCtrl.deleteProject($index)"> </i>
+          </span>
+        </li>
+        
+        <li>
+          <div>
+          <input type="text" placeholder="Enter Project Name" ng-if="projectCtrl.enableAddProj" ng-model="projectCtrl.project.name" ng-keypress="projectCtrl.handleSubmit($event)"> 
+          <span class="btn btn-sm btn-warning margin-top-6" ng-if="projectCtrl.enableAddProj" ng-click="projectCtrl.resetProject()"> Cancel </span>
+          </div>
+        </li>
+
+        <li ng-click="projectCtrl.enableAddProj = true"> 
+          <div class="text-danger cursor-pointer"> <i class="fa fa-plus fa-2x fa-bg-warning margin-right-10" aria-hidden="true"></i>
+              <span style="position:relative"> Add Folder </span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div ui-view="detailContent"> </div>
+    </div>
+  </div>
+
+  <ul id="contextMenu" class="dropdown-menu" role="menu" style="display:none" >
+    <li><a tabindex="-1" href="#">Action</a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+    <li><a tabindex="-1" href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a tabindex="-1" href="#">Separated link</a></li>
+  </ul>
+
+</div>
+
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+    //$('[data-toggle="confirmation"]').confirmation({ btnOkLabel: "Yes", btnCancelLabel: "No" });
+  });
+ 
+
+</script>

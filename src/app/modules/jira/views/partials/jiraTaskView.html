@@ -1,0 +1,59 @@
+<div class="row">
+	<div class="panel">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-10">
+	    			<input type="text" placeholder="Enter JQL" class="form-control" ng-model="jiraSearchCtrl.searchText">  			
+	    		</div>
+	    		<div class="col-xs-12 col-sm-12 col-md-2">
+	    		<button type="button" class="btn btn-info btn-sm pull-right" ng-click="jiraSearchCtrl.fetchJiraTasks()">
+							<span class="glyphicon glyphicon-search"></span> Search
+					</button> 
+				</div>
+	    		<div class="col-xs-12 col-sm-6 col-md-12">
+	    			<div class="hr-bottom"> </div>
+	    		</div>
+	    		<div class="col-xs-12 text-success">
+	    			<h3> Search Result </h3>
+	    			<div class="hr-bottom"> </div>
+	    		</div>
+		    	<div class="col-xs-12">
+					<table class="table table-sm">
+						<thead class="text-warning">
+							<tr>
+							<td><h5> Key </h5></td>
+							<td><h5> Name </h5></td>
+							<td><h5> Status </h5></td>
+							<td><h5> Priority</h5></td>
+							<td><h5> Assigned To</h5></td>
+							<td><h5> Due Date</h5></td>
+							</tr>
+						<thead>
+
+						<tbody>
+							<tr ng-repeat="jiraTask in jiraSearchCtrl.allJiraTasks" class="bg-{{(jiraTask.fields.status.name == 'Open')? 'warning' : 'success'}} cursor-pointer">
+							<td>{{jiraTask.key}}</td>
+							<td>{{jiraTask.fields.summary}}</td>
+							<td ng-if="!jiraTask.editing" ng-dblclick="jiraTask.editing = true">{{jiraTask.fields.status.name}}</td>
+							<td ng-if="jiraTask.editing">
+									
+								<select id="status" class="form-control" ng-model="jiraTask.fields.status.name">
+  									<option ng-repeat="option in jiraSearchCtrl.jiraStatusList" value="{{option.id}}">{{option.name}}</option>
+			  					</select>
+							</td>
+							<td>{{jiraTask.fields.priority.name}}</td>
+							<td>{{jiraTask.fields.assignee.name}}</td>
+							<td>{{jiraTask.fields.dueDate}}</td>
+							<td ng-if="jiraTask.editing">
+								<i class="fa fa-check fa-2x fa-bg-success" aria-hidden="true" ng-click="jiraSearchCtrl.handleTaskEdit(jiraTask.key)"></i>
+								<i class="fa fa-times fa-2x fa-bg-error" aria-hidden="true" ng-click="jiraSearchCtrl.cancelTaskEdit(jiraTask.key)"></i>
+    						</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="hr-bottom"> </div>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+</div>

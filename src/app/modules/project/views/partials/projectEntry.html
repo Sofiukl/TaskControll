@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h2> Enter Your Project Details </h2>
+	</div>
+</div>
+
+<div class="row">
+		<div class="panel panel-default">
+		    <div class="panel-body">
+
+		    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <label> Project Name </label>
+			      </span>
+	      		  <input type="text" placeholder="Project Name" ng-model="projectCtrl.project.name" class="form-control">
+	    		</div>
+		    </div>
+
+		    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <label> Description </label>
+			      </span>
+	      		  <input type="text" placeholder="Description" ng-model="projectCtrl.project.description" class="form-control">
+	    		</div>
+		    </div>
+		    
+			<div class="col-xs-12">
+			 		<hr>
+					<input class="pull-right btn btn-primary" type="button" value="Save" ng-click="projectCtrl.saveProject()">
+			</div>
+
+			</div>
+		</div>
+</div>
+
+
+
+
+
+

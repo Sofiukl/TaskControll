@@ -1,0 +1,45 @@
+(function(){
+
+	function HeaderController($state, $rootScope, $http, $state, $auth, toastr, $log) {
+	
+		var vm = this;
+		vm.header = 'Menu Items';
+		vm.searchBarWidth = '250px';
+		vm.searchedText = '';
+
+		vm.isAuthenticated = function(){
+			return $auth.isAuthenticated();
+		}
+		
+		vm.expireSession = function(){
+
+		    if (!$auth.isAuthenticated()) { return; }
+		    $auth.logout()
+		      .then(function() {
+		          toastr.info('You have successfully logged out.');
+		          $state.go('root.login');
+		      });
+
+		}
+
+		$rootScope.$on('unAuthorizedAccess', function(data){
+			toastr.info('You don\'t have permission to access this.');
+		});
+
+		vm.focusEventOnSearchBox = function(){
+			vm.searchBarWidth = '500px';
+		}	
+
+		vm.searchTasks = function (keypressEvent) {
+			if(keypressEvent.which === 13){
+            	toastr.info('You have Searched with text ' + vm.searchedText);
+            	$state.go('root.home.viewSearchedTask', {searchedText : vm.searchedText});
+			}
+		}
+
+	};
+
+	angular.module('taskControllApp')
+		.controller('HeaderController', HeaderController);
+
+})();

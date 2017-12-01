@@ -1,0 +1,21 @@
+(function() {
+  'use strict';
+
+  var app = angular.module('taskControllApp', ['ngTouch', 'ui.bootstrap', 'ui.grid', 'ui.grid.selection', 'ui.grid.exporter', 'ui.router' , 'as.sortable', 'ngSanitize', 'ngCsv', 'angular-growl', 'toastr', 'satellizer', 'angularMoment', 'btford.socket-io'])
+  .constant('USER_ROLES',  {
+	  all: '*',
+	  admin: 'admin',
+	  editor: 'editor',
+	  normaluser: 'normaluser',
+	  guest: 'guest'	
+  });
+
+  app.filter('startFrom', function(){
+  	
+		return function(data,start){
+  			return data.slice(start);
+  	}
+    
+  });
+
+})();

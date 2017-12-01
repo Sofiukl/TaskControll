@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="col-xs-12 col-md-12">
+		<i title="List View" class="fa fa-list fa-{{(dashboard.activeViewClass == 'fa-bg-list')? 1 : -1}} pull-right padding-left-12" ng-click="dashboard.changeViewType(0)" aria-hidden="true"></i>
+		
+		<i title="Thumbnail View" class="fa fa-th-large fa-{{(dashboard.activeViewClass == 'fa-bg-thumbnail')? 1 : -1}} pull-right" ng-click="dashboard.changeViewType(1)" aria-hidden="true"></i>
+	</div>
+
+	<div ng-if="dashboard.activeView == 'list'"  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding-top-12">
+		<div class="panel panel-primary">
+		    <div class="panel-body">
+		    	<div class="row" ng-repeat="feed in dashboard.allFeeds">
+			    	<div class="col-lg-6">
+			    		<span class="fa fa-square fa-{{($index < 4)? $index : $index % 4}}"> </span>
+			    		<a ui-sref="root.home.viewTask({feedId:feed.feed_id})" > {{feed.name}} </a>
+			    	</div>
+			    	<div class="col-lg-6 pull-right"> 
+			    		<label>{{feed.taskCount}}</label>
+			    	</div>
+			    	<div class="col-lg-12"> <hr> </div>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div data-as-sortable ng-if="dashboard.activeView == 'thumbnail'" class="col-md-3 col-sm-6 col-xs-12 padding-top-12" data-ng-model="dashboard.allFeeds">
+		<div data-as-sortable-item ng-repeat="feed in dashboard.allFeeds">
+		    <div data-as-sortable-item-handle class="info-box">
+		        <span class="info-box-icon bg-{{($index < 4)? $index : $index % 4}}">
+		         {{feed.taskCount}}
+		        </span>
+
+		        <div class="info-box-content">
+		          <span class="info-box-text"><a ui-sref="root.home.viewTask({feedId:feed.feed_id})" > 
+		          {{feed.name}} </a>
+				 <i class="pull-right fa fa-refresh cursor-pointer" aria-hidden="true" ng-click="dashboard.refreshFeedCount($index)"></i>
+				 <i class="fa fa-trash pull-right cursor-pointer" aria-hidden="true" ng-click="dashboard.deleteFeed($index)"> </i>
+		          </span>
+		        </div>  
+		    </div>
+		</div>
+	</div>
+</div>

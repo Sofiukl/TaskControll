@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" >
+   <head>
+      
+      <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
+      <link rel="stylesheet" type="text/css" href="lib/bootstrap-social/bootstrap-social.css">
+      <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" type="text/css" href="lib/angular-growl-v2/build/angular-growl.css">
+      <link rel="stylesheet" type="text/css" href="lib/angular-ui-grid/ui-grid.css">
+      <link rel="stylesheet" type="text/css" href="common/ui-components/styles/dashboard.css">
+      <link rel="stylesheet" type="text/css" href="common/ui-components/styles/custom.styles.css">
+      <link rel="stylesheet" type="text/css" href="lib/angular-toastr/dist/angular-toastr.css">
+      <link rel="stylesheet" type="text/css" href="lib/ng-sortable/dist/ng-sortable.css">
+      <link rel="stylesheet" type="text/css" href="lib/ng-sortable/dist/ng-sortable.style.css">
+      
+
+      <script src="lib/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap-1.js"></script>
+      <script type="text/javascript" src="lib/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+      <script type="text/javascript" src="lib/bootstrap-confirmation/bootstrap-confirmation.js"></script>
+      <script type="text/javascript" src="lib/angular/angular.js"></script>
+      <script type="text/javascript" src="lib/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+      <script type="text/javascript" src="lib/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+      
+      <script type="text/javascript" src="lib/angular-animate/angular-animate.js"></script>
+      <script type="text/javascript" src="lib/angular-touch/angular-touch.js"></script>
+      <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+      <script type="text/javascript" src="lib/angular-ui-grid/ui-grid.js"> </script>
+      <script type="text/javascript" src="lib/angular-growl-v2/build/angular-growl.js"> </script>
+      <script type="text/javascript" src="lib/chart.js/dist/Chart.js"> </script>
+      <script type="text/javascript" src="lib/angular-chart.js/dist/angular-chart.js"> </script>
+      <script type="text/javascript" src="lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+      <script type="text/javascript" src="lib/moment/moment.js"></script>
+      <script type="text/javascript" src="lib/angular-moment/angular-moment.js"></script>
+      <script type="text/javascript" src="lib/ng-sortable/dist/ng-sortable.js"></script>
+      <script type="text/javascript" src="lib/angular-sanitize/angular-sanitize.js"></script>
+      <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+      <script type="text/javascript" src="lib/angular-socket-io/socket.js"></script>
+      <script type="text/javascript" src="lib/ng-csv/build/ng-csv.js"></script>
+      <script type="text/javascript" src="lib/satellizer/dist/satellizer.js"></script>
+      <script type="text/javascript" src="app.module.js"></script>
+      <script type="text/javascript" src="common/global/configs/app.config.js"></script>
+      <script type="text/javascript" src="common/global/configs/oauth.config.js"></script>
+      <script type="text/javascript" src="common/global/configs/context.menu.js"></script>
+
+      <script type="text/javascript" src="common/global/services/DbActionService.js"></script>
+      <script type="text/javascript" src="common/global/services/FetchFeedService.js"></script>
+       <script type="text/javascript" src="common/global/services/FetchFromJiraService.js"></script>
+      <script type="text/javascript" src="common/global/services/DatepickerConfig.js"></script>
+      <script type="text/javascript" src="common/global/services/DropdownService.js"></script>
+
+      <script type="text/javascript" src="lib/taskControllApp/all.services.min.js"></script>
+      <script type="text/javascript" src="lib/taskControllApp/all.validator.min.js"></script>
+      <script type="text/javascript" src="common/global/controller/BaseController.js"></script>
+      <script type="text/javascript" src="lib/taskControllApp/all.controllers.min.js"></script>
+      
+      <!-- <script type="text/javascript" src="modules/menu/controllers/menuCtrl.js"></script> -->
+      <!-- <script type="text/javascript" src="modules/client/scripts/controllers/clientEntryController.js"></script>
+      <script type="text/javascript" src="modules/client/scripts/controllers/clientQueryController.js"></script> -->
+      <!-- <script type="text/javascript" src="modules/client/scripts/controllers/dist//clientController.min.js.map"></script> -->
+      <!-- <script type="text/javascript" src="modules/charge/scripts/controllers/chargeEntryController.js"></script> -->
+      <!-- <script type="text/javascript" src="modules/login/scripts/controllers/LogInController.js"></script> -->
+      <!--  <script type="text/javascript" src="modules/dashboard/scripts/controllers/DashboardController.js"></script> -->
+
+      <!-- <script type="text/javascript" src="modules/client/scripts/services/clientValidator.js"></script>
+      <script type="text/javascript" src="modules/charge/scripts/services/chargeValidator.js"></script> -->
+
+      <!-- <script type="text/javascript" src="modules/login/scripts/services/UserService.js"></script>
+      <script type="text/javascript" src="modules/login/scripts/services/LoginService.js"></script>
+      <script type="text/javascript" src="modules/client/scripts/services/clientFactory.js"></script>
+      <script type="text/javascript" src="modules/client/scripts/services/PaginationService.js"></script> -->
+
+   </head>
+   <body ng-app="taskControllApp">
+
+   <div class="container">
+
+   <div class="row">
+      <div ui-view="header"> </div>
+   </div>
+
+<!--  -->
+   <div class="row">
+      <div ui-view="content"> </div>   
+   </div>
+  
+
+   </div>
+   
+   <script type="text/javascript">
+      $(function(){
+         var socket = io.connect();
+         
+         var n = new Date().getTime();
+         var timeStr = ''+n;
+         
+
+      });
+
+   </script>
+
+   </body>
+</html>

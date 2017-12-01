@@ -1,0 +1,68 @@
+<div class="row">
+	<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="col-xs-12 text-danger">
+	    		<h4> Upload Your Tasks </h4>
+	    	</div>
+    		
+            <div class="col-xs-12 col-sm-12 col-md-4 padding-top-5">
+                <input type="file" file-model="taskUpldCtrl.taskUploadFile" ngf-select ngf-pattern="'.json'" accept=".json" ngf-max-size="2MB"/>
+            </div>
+    		<div class="col-xs-4">
+    			<div class="btn btn-sm btn-danger" ng-click="taskUpldCtrl.saveTask()"> Upload Task</div>
+            </div>
+            <br/>
+            <br/>
+            
+            <div class="col-xs-12 col-sm-6 col-md-12">
+                <h5> Your Uploaded Tasks </h5>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-12">
+                <div class="hr-bottom"> </div>
+            </div>
+
+            <div class="col-xs-12 text-danger">
+                <table class="table table-sm">
+                    <thead class="text-warning">
+                        <tr>
+                            <td>Status</td>
+                            <td>Name </td>
+                            <td>Priority</td>
+                            <td>Parent</td>
+                            <td>Assigned To</td>
+                            <td>Due Date</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="task in taskUpldCtrl.tasks" class="bg-{{(task.status == 'Open')? 'warning' : 'success'}} cursor-pointer">
+                            <td>{{task.status}}</td>
+                            <td>{{task.name}}</td>
+                            <td>{{task.priority}}</td>
+                            <td>{{task.parent}}</td>
+                            <td>{{task.assignedTo}}</td>
+                            <td>{{task.dueDate | date }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+	
+});
+
+
+</script>
+
+
+
+
+
+
+

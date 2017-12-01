@@ -1,0 +1,396 @@
+/**
+	styles on body and container
+**/
+body {
+	background: #eee !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;	
+}
+
+.container{
+	width:100%;
+}
+
+/**
+
+Styles for log in box
+
+**/
+
+.loginBox {
+	text-align: center;
+	padding-top: 5%;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #b3b0b0;  
+  border-radius: 6px;
+}
+
+.login-label{
+	padding-bottom: 30px;
+}
+.form-input {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  width: 300px;
+  padding: 10px;
+	@include box-sizing(border-box);
+}
+
+.form-input:focus{
+    border: 1px solid rgba(81, 203, 238, 1); 
+}
+
+.login-btn{
+	padding-top: 20px;
+	size: 70px;
+}
+
+.input-style {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* style for horizontal line */
+.hr {
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.hr-bottom {
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+/* color for some random sequential styles */
+
+.fa-0 {
+    color: #00c0ef !important;
+}
+
+.fa-1 {
+    color: #dd4b39 !important;
+}
+
+.fa-2 {
+    color: #00a65a !important;
+}
+
+.fa-3 {
+    color: #f39c12 !important;
+}
+
+/* some random background color for some sequntial background*/ 
+
+.bg-0 {
+    background-color: #00c0ef !important;
+}
+
+.bg-1 {
+    background-color: #dd4b39 !important;
+}
+
+.bg-2 {
+    background-color: #00a65a !important;
+}
+
+.bg-3 {
+    background-color: #f39c12 !important;
+}
+
+/* paddings */
+
+.padding-top-3 {
+  padding-top: 3px;
+}
+.padding-top-5 {
+  padding-top: 5px;
+}
+.padding-top-6 {
+  padding-top: 5px;
+}
+.padding-top-12 {
+  padding-top: 12px;
+}
+
+.padding-left-12 {
+  padding-left: 12px;
+}
+
+/* margin */
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-top-4 {
+  margin-top: 4px;
+}
+.margin-top-6 {
+  margin-top: 6px;
+}
+
+/*cursor pointer */
+
+.cursor-pointer {
+  cursor : pointer;
+}
+
+.cursor-pointer:hover {
+  color : #800000;
+}
+
+/* star color */
+
+.yellow-star-1 {
+  color: #B22222;
+}
+
+.yellow-star-2 {
+  color: #B22222;
+}
+
+.yellow-star-3 {
+  color: #B22222;
+}
+
+/* design for dashboard small widgets */
+
+.info-box {
+    display: block;
+    min-height: 90px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.info-box-icon {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    display: block;
+    float: left;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    font-size: 45px;
+    line-height: 90px;
+    background: rgba(0,0,0,0.2);
+}
+
+.info-box-content {
+    padding: 5px 10px;
+    margin-left: 90px;
+}
+
+.info-box-text {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.progress-description, .info-box-text {
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.info-box-number {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+/* designed for showing count */
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 4px;
+}
+
+.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.badge-error {
+  background-color: #b94a48;
+}
+.badge-error:hover {
+  background-color: #953b39;
+}
+.badge-warning {
+  background-color: #f89406;
+}
+.badge-warning:hover {
+  background-color: #c67605;
+}
+.badge-success {
+  background-color: #468847;
+}
+.badge-success:hover {
+  background-color: #356635;
+}
+.badge-info {
+  background-color: #3a87ad;
+}
+.badge-info:hover {
+  background-color: #2d6987;
+}
+.badge-inverse {
+  background-color: #333333;
+}
+.badge-inverse:hover {
+  background-color: #1a1a1a;
+}
+
+/* fa color */
+.fa-bg-error {
+  color: #d40d0d;
+}
+.fa-bg-error:hover {
+  color: #9e0606;
+}
+.fa-bg-warning {
+  color: #f89406;
+}
+.fa-bg-warning:hover {
+  color: #c67605;
+}
+.fa-bg-success {
+  color: #468847;
+}
+.fa-bg-success:hover {
+  color: #356635;
+}
+.fa-bg-info {
+  color: #3a87ad;
+}
+.fa-bg-info:hover {
+  color: #2d6987;
+}
+.fa-bg-inverse {
+  color: #333333;
+}
+.fa-bg-inverse:hover {
+  color: #1a1a1a;
+}
+
+.fa-bg-gray-blue {
+  color: #6c6f82;
+}
+
+
+/* search button within box */
+
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+
+/* adding style for extra options in task entry */
+
+.extra-options i {
+  float : right;
+  padding-left: 12px;
+}
+
+.comment-footer{
+  padding: 15px;
+}
+
+.padding-left {
+  padding-left: 20px;
+}
+
+.bg-skyblue {
+  background-color: #67C8FF
+}
+
+.dropdown-menu-pos {
+  padding: 0px 2px 10px 10px;
+}
+.dropdown-menu {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: -95px;
+    z-index: 1000;
+    text-align: right;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
+#my-pagination {
+  cursor: pointer;
+  display: inline-block;
+  padding-bottom: 6px;
+  float: right;
+}
+
+#current-page-no{
+  display: inline-table;
+  border: 1px solid;
+  height: 10px;
+  width: 20px;
+  text-align: center;
+  
+}
+
+span#page-link-prev {
+    padding-right: 6px;
+}
+
+span#page-link-next {
+    padding-left: 6px;
+    padding-right: 15px;
+}
+#page-link{
+  color: red;
+}

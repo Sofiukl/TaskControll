@@ -1,0 +1,28 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> 
+          <a class="navbar-brand" ui-sref="root.home.dashboard">Task Controll</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li ng-if="header.isAuthenticated()"><a href="#">Buy Service</a></li>
+            <li ng-if="header.isAuthenticated()" ng-click="header.expireSession()"><a href="#">Logout</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" ng-if="header.isAuthenticated()">
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-search"></i>
+              <input type="text" class="form-control" placeholder="Search..." style="width:{{header.searchBarWidth}}" ng-click="header.focusEventOnSearchBox()" ng-keypress="header.searchTasks($event)" ng-model="header.searchedText">  
+            </div>
+          </form>
+        </div>
+      </div>
+</nav>
