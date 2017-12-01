@@ -46,7 +46,7 @@ mongoose.connect('mongodb://taskcontroll:taskcontroll@ds125126.mlab.com:25126/ta
 //modularization of routing in express 4
 var facebookRoute = require('./server/oAuth/facebook/oAuthFbRoute.js');
 var loginRoute = require('./server/login/loginRoute.js');
-var ensureAuthentication = require('./server/restEndpoints/routes/routes.restriction.js');
+var ensureAuthentication = require('./server/restEndPoints/routes/routes.restriction.js');
 
 
 app.use('/', ensureAuthentication);
