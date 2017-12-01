@@ -32,8 +32,10 @@ var sessionOpts = {
 app.use(session(sessionOpts));
 
 
+
 //start the server
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
+app.set('port', port);
 server.listen(port, function(){
 	console.log('Server running at ' + properties.serverPort + ' port..');	
 });
