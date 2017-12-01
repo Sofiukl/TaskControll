@@ -40,7 +40,7 @@ server.listen(process.env.port, function(){
 //create mongoose connection
 var mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost/taskControllApp');
-mongoose.connect('mongodb://taskcontroll:taskcontroll@ds125126.mlab.com:25126/taskcontroll');
+mongoose.connect('mongodb://taskcontroll:taskcontroll@ds125126.mlab.com:25126/taskcontroll', { useMongoClient: true });
 
 
 //modularization of routing in express 4
