@@ -37,7 +37,7 @@ app.use(session(sessionOpts));
 var port = process.env.PORT || 3000;
 app.set('port', port);
 server.listen(port, function(){
-	console.log('Server running at ' + properties.serverPort + ' port..');	
+	console.log('Server running at ' + port + ' port..');	
 });
 
 //create mongoose connection
