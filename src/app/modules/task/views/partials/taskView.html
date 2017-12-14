@@ -141,6 +141,7 @@
 							<thead class="text-warning">
 								<tr>
 								<td>Delete</td>
+								<td>Edit</td>
 								<td>Task Id</td>
 								<td>Status</td>
 								<td>Name </td>
@@ -157,6 +158,7 @@
 							<tbody>
 								<tr ng-repeat="task in taskViewCtrl.currentTasks | orderBy : taskViewCtrl.orderByString : taskViewCtrl.sortOrderDesc | filter : taskViewCtrl.searchText" class="bg-{{(task.status == 'Open')? 'warning' : 'success'}} cursor-pointer">
 								<td> <i class="fa fa-trash text-white" aria-hidden="true" ng-click="taskViewCtrl.deleteTask(task._id)"></i> </td>
+								<td> <i class="fa fa-pencil-square-o text-white" aria-hidden="true" ng-click="taskViewCtrl.updateTask(task._id)"></i> </td>
 								<td>{{task.task_id}}</td>
 								<td ng-if="!task.editing" ng-dblclick="task.editing = true">{{task.status}}</td>
 								<td ng-if="task.editing">

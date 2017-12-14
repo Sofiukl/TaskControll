@@ -265,6 +265,18 @@
 
         }
 
+        vm.updateTask = function (taskId) {
+            var task = null;
+            vm.allTasks.forEach(function(t) {
+                if(t._id === taskId){
+                    task = t;
+                    alert(task.editing);
+                    return;
+                }
+            });
+
+            task.editing = true;
+        }
 
         vm.handleTaskEdit = function(taskId) {
             var task = null;
